@@ -38,7 +38,15 @@
     font-size: 1.8rem;
     margin-top: 0px;
     margin-bottom: 2px;
+    width: fit-content;
+    margin: 0 auto;
+    transition: 3s;
 }
+
+.infosection h1:hover{
+    transform: rotate(2turn);
+}
+
 
 .infosection h2{
     font-size: 1em;
