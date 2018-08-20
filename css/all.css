@@ -1,0 +1,68 @@
+*{
+    font-family: 'Raleway', sans-serif;
+}
+
+.mainmenu__list{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding: 15px;
+}
+
+.mainmenu__list li{
+    padding: 0 10px;
+}
+
+.mainmenu__list a{
+    text-decoration: none;
+    color: #808080;
+}
+
+.mainmenu__list a:hover{
+    color: #0d0d0d;
+}
+
+.infosection{
+    text-align: center;
+}
+
+.infosection img{
+    border-radius: 50%;
+    width: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.infosection h1{
+    font-size: 1.8rem;
+    margin-top: 0px;
+    margin-bottom: 2px;
+}
+
+.infosection h2{
+    font-size: 1em;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.infosection ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.infosection li{
+    padding: 0 10px;
+    font-size: 1em;
+}
+
+.infosection li a{
+    color: #808080;
+    text-decoration: none;
+}
+
+.infosection li a:hover{
+    color: #0d0d0d;
+}

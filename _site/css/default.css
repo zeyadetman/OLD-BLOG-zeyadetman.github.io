@@ -1,0 +1,53 @@
+.siteDefault{
+    display: grid;
+    grid-template-columns: minmax(177px, 310px) minmax(620px, 40em);
+    grid-column-gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.infosection{
+    align-content: center;
+    min-width: 280px;
+    margin-top: 60px;
+}
+
+.mainmenu{
+    width: 100%;
+    max-width: 40em;
+}
+
+.mainmenu__content{
+    padding: 20px;
+}
+
+.mainmenu__content ul {
+    list-style: none;
+}
+
+.mainmenu__content a{
+    text-decoration: none;
+    font-weight: 600;
+    color: #2b2b2b;
+    font-size: 1.2em;
+    transition: .3s;
+}
+
+.mainmenu__content a:hover{
+    color:#f90;
+}
+
+.mainmenu__content li p{
+    margin-top: 2px;
+    color: #808080;
+}
+
+.mainmenu__content li{
+    margin-bottom: 3em;
+}
+
+@media (max-width: 950px){
+    .infosection{
+        display: none;
+    }
+}

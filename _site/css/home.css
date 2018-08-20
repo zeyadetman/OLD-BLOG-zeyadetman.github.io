@@ -1,0 +1,40 @@
+.infosection{
+    width: 90%;
+    height: 60%;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.infosection__activity span{
+    background: gainsboro;
+    padding: 2px 5px 1px 5px;
+    font-size: 10px;
+    text-transform: capitalize;
+    display: inline-block;
+    vertical-align: text-bottom;
+    margin-right: 5px;
+    color: #0d0d0d;
+}
+
+.infosection__activity li{
+    margin: 5px 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+.infosection__activity ul{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+
+}
+
+.infosection__details{
+    width: 60%;
+    margin: 0 auto;
+    transition: all 1s ease;
+}

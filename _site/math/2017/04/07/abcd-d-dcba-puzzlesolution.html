@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <title>Zeyad Etman | ABCD * D = DCBA (Puzzle+Solution)</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
+<meta name="generator" content="Jekyll v3.7.3" />
+<meta property="og:title" content="Home" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="Zeyad Etman" />
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link rel="stylesheet" href="/css/all.css">
+<link rel="stylesheet" href="/css/default.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Zeyad Etman" /></head>
+<body>
+
+<div class="siteDefault">
+
+
+  <div class="infosection">
+    <div style="position: fixed; max-width: 280px;">
+      <img src="/images/me.jpg" />
+      <h1>Zeyad Etman</h1>
+      <h2>Front-End Developer, Software Engineer</h2>
+      <ul>
+        <li><a href="https://github.com/zeyadetman"><i class="fab fa-github"></i></a></li>
+        <li><a href="https://twitter.com/zeyadetman"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://www.facebook.com/zeyadetman"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/zeyadetman"><i class="fab fa-linkedin-in"></i></a></li>
+        <li><a href="zeyadetman@gmail.com"><i class="far fa-envelope"></i></a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="mainmenu">
+    <ul class="mainmenu__list">
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+          <a href="/projects">Projects</a>
+      </li>
+      <li>
+          <a href="/blog">Blog</a>
+      </li>
+    </ul>
+    <div class="mainmenu__content">
+      <h2 style="margin-bottom: 0;">ABCD * D = DCBA (Puzzle+Solution)</h2>
+<p style="margin-top: 2px;color: #808080; margin-bottom: 3em;">Apr 07, 2017 • <span>math</span></p>
+
+<p><strong>The Puzzle</strong></p>
+
+<p>“ABCD * D = DCBA”, Replace every character with a number to make the equation mathematically right.</p>
+
+<p><strong>The Solution using brute-force algorithm</strong></p>
+
+<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td><td class="code"><pre><span class="cp">#include&lt;bits/stdc++.h&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">main</span><span class="p">(){</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">a</span><span class="o">&lt;=</span><span class="mi">9</span><span class="p">;</span><span class="n">a</span><span class="o">++</span><span class="p">){</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">b</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">b</span><span class="o">&lt;=</span><span class="mi">9</span><span class="p">;</span><span class="n">b</span><span class="o">++</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">!=</span><span class="n">b</span><span class="p">){</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">c</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">c</span><span class="o">&lt;=</span><span class="mi">9</span><span class="p">;</span><span class="n">c</span><span class="o">++</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">!=</span><span class="n">c</span> <span class="o">&amp;&amp;</span> <span class="n">b</span><span class="o">!=</span><span class="n">c</span><span class="p">){</span>
+                <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">d</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">d</span><span class="o">&lt;=</span><span class="mi">9</span><span class="p">;</span><span class="n">d</span><span class="o">++</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">!=</span><span class="n">d</span> <span class="o">&amp;&amp;</span> <span class="n">b</span><span class="o">!=</span><span class="n">d</span> <span class="o">&amp;&amp;</span> <span class="n">c</span><span class="o">!=</span><span class="n">d</span><span class="p">){</span>
+                        <span class="k">if</span><span class="p">((</span><span class="n">a</span><span class="o">*</span><span class="mi">1000</span><span class="o">+</span><span class="n">b</span><span class="o">*</span><span class="mi">100</span><span class="o">+</span><span class="n">c</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="n">d</span><span class="p">)</span><span class="o">*</span><span class="n">d</span> <span class="o">==</span> <span class="p">(</span><span class="n">d</span><span class="o">*</span><span class="mi">1000</span><span class="o">+</span><span class="n">c</span><span class="o">*</span><span class="mi">100</span><span class="o">+</span><span class="n">b</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="n">a</span><span class="p">))</span>
+                            <span class="k">return</span> <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"abcd</span><span class="se">\n</span><span class="s">"</span><span class="o">&lt;&lt;</span><span class="n">a</span><span class="o">&lt;&lt;</span><span class="n">b</span><span class="o">&lt;&lt;</span><span class="n">c</span><span class="o">&lt;&lt;</span><span class="n">d</span><span class="p">,</span><span class="mi">0</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p><em><strong>The final answer is 1089.</strong></em></p>
+
+    </div>
+  </div>
+  
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Zeyad Etman</title>
+<meta name="generator" content="Jekyll v3.7.3" />
+<meta property="og:title" content="Home" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="Zeyad Etman" />
+<script type="application/ld+json">
+{"name":"Zeyad Etman","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"WebSite","url":"http://localhost:4000/","headline":"About","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link rel="stylesheet" href="../css/all.css">
+<link rel="stylesheet" href="../css/home.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Zeyad Etman" /></head>
+<body>
+  <div class="mainmenu">
+    <ul class="mainmenu__list">
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+          <a href="/projects">Projects</a>
+      </li>
+      <li>
+          <a href="/blog">Blog</a>
+      </li>
+    </ul>
+  </div>
+  
+  <div class="infosection">
+    <img src="../images/me.jpg" />
+    <h1>Zeyad Etman</h1>
+    <h2>Front-End Developer, Software Engineer</h2>
+    <p class="infosection__details">I'm a front-end developer 💻, writing codes everyday, Making beautiful things in other technologies. My ⭐ languages are Javascript and Python.</p>
+    <ul>
+      <li><a href="https://github.com/zeyadetman"><i class="fab fa-github"></i></a></li>
+      <li><a href="https://twitter.com/zeyadetman"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="https://www.facebook.com/zeyadetman"><i class="fab fa-facebook-f"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/zeyadetman"><i class="fab fa-linkedin-in"></i></a></li>
+      <li><a href="zeyadetman@gmail.com"><i class="far fa-envelope"></i></a></li>
+    </ul>
+    <div class="infosection__activity">
+      <ul>
+        <li id="latestCoding"><span>Latest Coding</span></li>
+        <li id="latestWriting"><span>Latest Writing</span><a href="">dsadjj kahjkashd asjdh</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    const url = 'https://api.github.com/users/zeyadetman/events/public';
+    fetch(url).then(response=>response.json())
+              .then(response=>{
+                response.find(event=>{
+                  if(event.type === 'PushEvent'){
+                    document.getElementById('latestCoding').innerHTML += `
+                    <a href="https://github.com/${event.repo.name}">${event.repo.name}</a>
+                    `;
+                    return event; 
+                  }
+                });
+              })
+  </script>
+
+</body>
+</html>
