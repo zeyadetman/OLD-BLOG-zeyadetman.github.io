@@ -1,3 +1,5 @@
+@import url(syntax-highlighting.css);
+
 .siteDefault{
     display: grid;
     grid-template-columns: minmax(177px, 310px) minmax(620px, 40em);
