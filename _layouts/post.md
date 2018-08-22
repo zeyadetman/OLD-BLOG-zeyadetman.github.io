@@ -34,10 +34,6 @@ layout: default
 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMICVALUES FROM YOUR PLATFORM OR CMS.
 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT:https://disqus.com/admin/universalcode/#configuration-variables*/
 
-var disqus_config = function () {
-  this.page.url = '{{ page.url | absolute_url }}';
-};
-
 (function() { // DON'T EDIT BELOW THIS LINE
     var d = document, s = d.createElement('script');
     s.src = 'https://zeyadetman.disqus.com/embed.js';
