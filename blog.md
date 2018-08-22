@@ -9,7 +9,9 @@ permalink: /blog/
 }
 </style>
 
-<h1>Writings & Thoughts</h1>
+<h1>Writings & Thoughts <a class="twitter-follow-button"
+  href="https://twitter.com/zeyadetman"
+  data-size="small"></a></h1>
 <ul class="posts">
   {% for post in site.posts %}
     <li>
