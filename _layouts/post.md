@@ -18,7 +18,7 @@ layout: default
 
     <a class="twitter-share-button"
         href=
-        "https://twitter.com/intent/tweet?text={{page.title}},%20read%20it%20on:%20{{page.url}}"
+        "https://twitter.com/intent/tweet?text={{page.title}},%20read%20it%20on:%20"
         data-size="large"></a>
 </div>
 
