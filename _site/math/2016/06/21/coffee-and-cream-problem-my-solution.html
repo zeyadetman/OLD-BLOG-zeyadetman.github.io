@@ -51,7 +51,11 @@
       <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5abac57df3c38cac"></script> 
 
 <h2 style="margin-bottom: 0;">Coffee and Cream problem, My solution</h2>
-<p style="margin-top: 2px;color: #808080; margin-bottom: 3em;">Jun 21, 2016 • <span>math</span></p>
+<p style="margin-top: 2px;color: #808080; margin-bottom: 3em; display: flex;">Jun 21, 2016<span style="margin: 0 10px;">math</span>
+<a class="twitter-follow-button"
+  href="https://twitter.com/zeyadetman"
+  data-size="small"></a>
+</p>
 
 <p><strong>Here’s the problem from <a href="http://mrhonner.com/" target="_blank">Mr.Honner Blog</a>:</strong></p>
 <blockquote>
@@ -92,11 +96,15 @@ let’s try n=0.5 :)
 4cr+.5cf (8) — 4.5cf+1cr (4.5) //cr &gt; in coffee, okay that’s great! make sense</p>
 
 
-<div id="fb-root"></div>
-<div class="fb-share-button" data-href="/math/2016/06/21/coffee-and-cream-problem-my-solution.html" data-layout="button" data-size="large" data-mobile-iframe="true"><a target="_blank" href="/math/2016/06/21/coffee-and-cream-problem-my-solution.html" class="fb-xfbml-parse-ignore">Share</a></div>
+<div class="socialmedia">
+    <div id="fb-root"></div>
+    <div class="fb-share-button" data-href="/math/2016/06/21/coffee-and-cream-problem-my-solution.html" data-layout="button" data-size="large"       data-mobile-iframe="true"><a target="_blank" href="/math/2016/06/21/coffee-and-cream-problem-my-solution.html"                              class="fb-xfbml-parse-ignore"></a></div>
 
-<a href="">share on twitter</a>
-
+    <a class="twitter-share-button"
+        href=
+        "https://twitter.com/intent/tweet?text=Coffee and Cream problem, My solution,%20read%20it%20on:%20/math/2016/06/21/coffee-and-cream-problem-my-solution.html"
+        data-size="large"></a>
+</div>
 
 
 
@@ -115,8 +123,6 @@ var disqus_config = function () {
   this.page.identifier = 'http://localhost:4000/math/2016/06/21/coffee-and-cream-problem-my-solution.html';
 };
 
-console.log("/math/2016/06/21/coffee-and-cream-problem-my-solution.html");
-
 (function() { // DON'T EDIT BELOW THIS LINE
     var d = document, s = d.createElement('script');
     s.src = 'https://zeyadetman.disqus.com/embed.js';
@@ -131,6 +137,23 @@ console.log("/math/2016/06/21/coffee-and-cream-problem-my-solution.html");
   js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1&appId=269290577224281&autoLogAppEvents=1';
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
+
+window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));
 
 </script>
 
