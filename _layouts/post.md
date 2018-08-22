@@ -36,7 +36,7 @@ layout: default
 
 var disqus_config = function () {
   this.page.url = '{{ page.url | absolute_url }}';
-  this.page.identifier = '{{ page.url | absolute_url }}';
+  this.page.identifier = PAGE_IDENTIFIER;
 };
 
 (function() { // DON'T EDIT BELOW THIS LINE
