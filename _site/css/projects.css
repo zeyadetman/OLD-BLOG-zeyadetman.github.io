@@ -54,7 +54,7 @@
 
 .cards{
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(auto, 25em);
     grid-column-gap: 20px;
     grid-row-gap: 15px;
 }
@@ -142,7 +142,7 @@ h3.projects-title:before {
     margin-top: 25px;
 }
 
-@media (max-width: 768px){
+@media (max-width: 950px){
     .projects-intro, .latest{
         width: 90%;
         padding: 0;
@@ -163,6 +163,18 @@ h3.projects-title:before {
     .cards{
         display: grid;
         grid-template-columns: 1fr;
+    }
+
+    .card-img{
+        width: 100%;
+    }
+
+    .card {
+        padding: 0;
+    }
+
+    .card-links{
+        justify-content: center;
     }
 
 }
