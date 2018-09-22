@@ -37,8 +37,8 @@
   <div class="infosection">
     <img src="/images/me.jpg" />
     <h1>Zeyad Etman</h1>
-    <h2>Front-End Developer, Software Engineer</h2>
-    <p class="infosection__details">I'm a front-end developer 💻, writing codes everyday, Making beautiful things in other technologies. My ⭐ languages are Javascript and Python.</p>
+    <h2>Software Engineer, Front-End Developer</h2>
+    <p class="infosection__details">I'm a front-end developer Currently <a href="https://www.arqamfc.com/" target="_blank">@ArqamFC</a>, writing code everyday, Making beautiful things using different technologies. My languages are Javascript and Python.</p>
     <ul>
       <li><a href="https://github.com/zeyadetman"><i class="fab fa-github"></i></a></li>
       <li><a href="https://twitter.com/zeyadetman"><i class="fab fa-twitter"></i></a></li>
@@ -48,13 +48,14 @@
     </ul>
     <div class="infosection__activity">
       <ul>
+        <li id="featuredProject"><span title="Featured project! Contributions are Welcome!">FEATURED</span><a href="https://github.com/zeyadetman/bankeeper">bankeeper</a></li>
         <li id="latestCoding"><span>Latest Coding</span></li>
         <li id="latestWriting"><span>Latest Writing</span><a href="{{site.posts.first.url}}">{{ site.posts.first.title }}</a></li>
       </ul>
     </div>
   </div>
 
-  <script>
+  <script async>
     const url = 'https://api.github.com/users/zeyadetman/events/public';
     fetch(url).then(response=>response.json())
               .then(response=>{

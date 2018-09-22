@@ -38,3 +38,7 @@
     margin: 0 auto;
     transition: all 1s ease;
 }
+
+#featuredProject span{
+    background: #fc3;
+}

@@ -24,7 +24,7 @@
     <div style="position: fixed; max-width: 280px;">
       <img src="/images/me.jpg" />
       <h1>Zeyad Etman</h1>
-      <h2>Front-End Developer, Software Engineer</h2>
+      <h2>Software Engineer, Front-End Developer</h2>
       <ul>
         <li><a href="https://github.com/zeyadetman"><i class="fab fa-github"></i></a></li>
         <li><a href="https://twitter.com/zeyadetman"><i class="fab fa-twitter"></i></a></li>
@@ -74,21 +74,24 @@ have two main components one big called ‘Library’ and another small ‘Book�
 			<span class="na">name</span><span class="p">:</span> <span class="s1">'Zero to one'</span><span class="p">,</span>
 			<span class="na">isbn</span><span class="p">:</span> <span class="s1">'9780804139298'</span><span class="p">,</span>
 			<span class="na">author</span><span class="p">:</span> <span class="s1">'Peter Thiel'</span><span class="p">,</span>
-			<span class="na">cover</span><span class="p">:</span> <span class="s1">'https://images.gr-assets.com/books/1414347376l/18050143.jpg'</span><span class="p">,</span>
+			<span class="na">cover</span><span class="p">:</span> 
+			<span class="s1">'https://images.gr-assets.com/books/1414347376l/18050143.jpg'</span><span class="p">,</span>
 			<span class="na">status</span><span class="p">:</span> <span class="kc">false</span>
 		<span class="p">},</span>
 		<span class="p">{</span>
 			<span class="na">name</span><span class="p">:</span> <span class="s2">"The Manager's Path"</span><span class="p">,</span>
 			<span class="na">isbn</span><span class="p">:</span> <span class="s1">'9781491973899'</span><span class="p">,</span>
 			<span class="na">author</span><span class="p">:</span> <span class="s1">'Camille Fournier'</span><span class="p">,</span>
-			<span class="na">cover</span><span class="p">:</span> <span class="s1">'https://images.gr-assets.com/books/1484107737l/33369254.jpg'</span><span class="p">,</span>
+			<span class="na">cover</span><span class="p">:</span> 
+			<span class="s1">'https://images.gr-assets.com/books/1484107737l/33369254.jpg'</span><span class="p">,</span>
 			<span class="na">status</span><span class="p">:</span> <span class="kc">false</span>
 		<span class="p">},</span>
 		<span class="p">{</span>
 			<span class="na">name</span><span class="p">:</span> <span class="s1">'Calculus, Better Explained'</span><span class="p">,</span>
 			<span class="na">isbn</span><span class="p">:</span> <span class="s1">'9781470070700'</span><span class="p">,</span>
 			<span class="na">author</span><span class="p">:</span> <span class="s1">'Kalid Azad'</span><span class="p">,</span>
-			<span class="na">cover</span><span class="p">:</span> <span class="s1">'https://images.gr-assets.com/books/1448590460l/27993945.jpg'</span><span class="p">,</span>
+			<span class="na">cover</span><span class="p">:</span> 
+			<span class="s1">'https://images.gr-assets.com/books/1448590460l/27993945.jpg'</span><span class="p">,</span>
 			<span class="na">status</span><span class="p">:</span> <span class="kc">false</span>
 		<span class="p">}</span>
 	<span class="p">]</span>
@@ -198,9 +201,11 @@ Great, let’s begin the second part</p>
 				<span class="p">)</span>
 			<span class="p">},</span>
 			<span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-                <span class="c1">//this is a callback to handle the new change of the book status and increment the reads</span>
-				<span class="kd">const</span> <span class="nx">_read</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">books</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">_book</span> <span class="o">=&gt;</span> <span class="nx">_book</span><span class="p">.</span><span class="nx">status</span> <span class="o">===</span> <span class="kc">true</span><span class="p">)</span>
-					<span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+                <span class="c1">//this is a callback to handle the new change of the book status </span>
+				<span class="c1">//and increment the reads</span>
+				<span class="kd">const</span> <span class="nx">_read</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">books</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">_book</span> <span class="o">=&gt;</span> 
+					<span class="nx">_book</span><span class="p">.</span><span class="nx">status</span> <span class="o">===</span> <span class="kc">true</span>
+				<span class="p">).</span><span class="nx">length</span><span class="p">;</span>
 				<span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span><span class="na">reads</span><span class="p">:</span> <span class="nx">_read</span><span class="p">});</span>
 			<span class="p">}</span>
 		<span class="p">);</span>
