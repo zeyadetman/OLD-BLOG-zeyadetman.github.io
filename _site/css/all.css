@@ -2,6 +2,10 @@
     font-family: 'Raleway', sans-serif;
 }
 
+a{
+    transition: all 0.3s ease;
+}
+
 body{
     margin: 0;
 }
@@ -18,12 +22,14 @@ body{
     padding: 0 10px;
 }
 
-.mainmenu__list a{
+.mainmenu__list a,
+.infosection__details a{
     text-decoration: none;
     color: #808080;
 }
 
-.mainmenu__list a:hover{
+.mainmenu__list a:hover,
+.infosection__details a:hover{
     color: #0d0d0d;
 }
 
