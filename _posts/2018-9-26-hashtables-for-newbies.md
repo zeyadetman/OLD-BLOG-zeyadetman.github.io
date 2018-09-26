@@ -99,3 +99,5 @@ In the actual implementations for the hashtable, the hash function must avoid th
 
 #### Notes:
 (1) Write it `white['code']` don't `white[code]` whatever you wrote `code` in the object to avoid conflicts between ordinary variables.
+
+You can read it on [GitHub](https://gist.github.com/zeyadetman/2843e7d8798a58c3c5149487999c0288).
