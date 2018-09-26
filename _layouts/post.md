@@ -6,11 +6,26 @@ layout: default
 .content-body img{
     max-width: 100%;
 }
+
+.post-title{
+  margin: 0 auto 15px auto;
+  padding: 15px;
+  width: fit-content;
+  border-radius: 5px;
+  color: #3e3e3e;
+  background: rgba(255, 192, 4, 0.88);
+}
+
+.post-info{
+  color: #808080;
+  text-align: center;
+  margin: 5px auto;
+}
 </style>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5abac57df3c38cac"></script> 
 
-<h2 style="margin-bottom: 0;">{{page.title}}</h2>
-<p style="margin-top: 2px;color: #808080; margin-bottom: 3em; display: flex;">{{page.date | date: "%b %d, %Y"}}<span style="margin: 0 10px;">{{page.categories}}</span>
+<h2 class="post-title">{{page.title}}</h2>
+<p class="post-info">{{page.date | date: "%b %d, %Y"}}<span style="margin: 0 10px;">{{page.categories}}</span>
 <a class="twitter-follow-button"
   href="https://twitter.com/zeyadetman"
   data-size="small"></a>
