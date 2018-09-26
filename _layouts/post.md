@@ -4,7 +4,7 @@ layout: default
 
 <style>
 .content-body img{
-    max-width: 300px;
+    max-width: 100%;
 }
 </style>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5abac57df3c38cac"></script> 
