@@ -1,6 +1,12 @@
 ---
 layout: default
 ---
+
+<style>
+.content-body img{
+    max-width: 300px;
+}
+</style>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5abac57df3c38cac"></script> 
 
 <h2 style="margin-bottom: 0;">{{page.title}}</h2>
@@ -10,8 +16,9 @@ layout: default
   data-size="small"></a>
 </p>
 
+<div class="content-body">
 {{content}}
-
+</div>
 <div class="socialmedia">
     <div id="fb-root"></div>
     <div class="fb-share-button" data-href="{{page.url}}" data-layout="button" data-size="large"       data-mobile-iframe="true"><a target="_blank" href="{{page.url}}"                              class="fb-xfbml-parse-ignore"></a></div>
