@@ -17,9 +17,12 @@ layout: default
 }
 
 .post-info{
+  padding-bottom: 15px;
+  border-bottom: 1px solid #808080;
   color: #808080;
-  text-align: center;
-  margin: 5px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5abac57df3c38cac"></script> 
