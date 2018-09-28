@@ -1,7 +1,32 @@
 ---
 layout: default
 ---
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5abac57df3c38cac"></script> 
+
+<style>
+.content-body img{
+    max-width: 100%;
+}
+
+.post-title{
+  margin: 0 auto 15px auto;
+  padding: 15px;
+  width: fit-content;
+  text-align: center;
+  border-radius: 5px;
+  color: #3e3e3e;
+  background: rgba(255, 192, 4, 0.88);
+}
+
+.post-info{
+  padding-bottom: 15px;
+  border-bottom: 1px solid #808080;
+  color: #808080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5abac57df3c38cac"></script>
 
 <h2 style="margin-bottom: 0;">{{page.title}}</h2>
 <p style="margin-top: 2px;color: #808080; margin-bottom: 3em; display: flex;">{{page.date | date: "%b %d, %Y"}}<span style="margin: 0 10px;">{{page.categories}}</span>
