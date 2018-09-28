@@ -26,11 +26,7 @@ layout: default
   align-items: center;
 }
 </style>
-<<<<<<< HEAD
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5abac57df3c38cac"></script>
-=======
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5abac57df3c38cac"></script> 
->>>>>>> abcea57555a9f521f36d5c353b96df7f61161fd5
 
 <h2 class="post-title">{{page.title}}</h2>
 <p class="post-info">{{page.date | date: "%b %d, %Y"}}<span style="margin: 0 10px;">{{page.categories}}</span>
