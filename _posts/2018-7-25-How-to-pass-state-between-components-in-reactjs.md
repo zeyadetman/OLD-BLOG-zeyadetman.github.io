@@ -158,7 +158,7 @@ handleCounter(_State) {
 				)
 			},
 			() => {
-                //this is a callback to handle the new change of the book status
+                //this is a callback to handle the new change of the book status 
 				//and increment the reads
 				const _read = this.state.books.filter(_book => 
 					_book.status === true

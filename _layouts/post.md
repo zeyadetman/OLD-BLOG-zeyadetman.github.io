@@ -26,17 +26,22 @@ layout: default
   align-items: center;
 }
 </style>
+<<<<<<< HEAD
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5abac57df3c38cac"></script>
+=======
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5abac57df3c38cac"></script> 
+>>>>>>> abcea57555a9f521f36d5c353b96df7f61161fd5
 
-<h2 style="margin-bottom: 0;">{{page.title}}</h2>
-<p style="margin-top: 2px;color: #808080; margin-bottom: 3em; display: flex;">{{page.date | date: "%b %d, %Y"}}<span style="margin: 0 10px;">{{page.categories}}</span>
+<h2 class="post-title">{{page.title}}</h2>
+<p class="post-info">{{page.date | date: "%b %d, %Y"}}<span style="margin: 0 10px;">{{page.categories}}</span>
 <a class="twitter-follow-button"
   href="https://twitter.com/zeyadetman"
   data-size="small"></a>
 </p>
 
+<div class="content-body">
 {{content}}
-
+</div>
 <div class="socialmedia">
     <div id="fb-root"></div>
     <div class="fb-share-button" data-href="{{page.url}}" data-layout="button" data-size="large"       data-mobile-iframe="true"><a target="_blank" href="{{page.url}}"                              class="fb-xfbml-parse-ignore"></a></div>
