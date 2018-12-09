@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <title>Zeyad Etman | Hashtables for newbies</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
+<meta name="generator" content="Jekyll v3.7.3" />
+<meta property="og:title" content="Hashtables for newbies" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="/technical/2018/09/26/hashtables-for-newbies.html" />
+<meta property="og:url" content="/technical/2018/09/26/hashtables-for-newbies.html" />
+<meta property="og:site_name" content="Zeyad Etman" />
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link rel="stylesheet" href="/css/all.css">
+<link rel="stylesheet" href="/css/default.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Zeyad Etman" /></head>
+<body>
+
+<div class="siteDefault">
+
+
+  <div class="infosection">
+    <div style="position: fixed; max-width: 280px;">
+      <button
+        data-balloon="What's the formula for this rotation🤔?
+          check it out more times, and send your thoughts to me."
+        data-balloon-pos="up"
+        data-balloon-length="large"
+        style="display: contents;"
+      >
+        <img src="/images/me.jpg" />
+      </button>
+      <h1>Zeyad Etman</h1>
+      <h2>Software Engineer, Front-End Developer</h2>
+      <ul>
+        <li><a href="https://github.com/zeyadetman"><i class="fab fa-github"></i></a></li>
+        <li><a href="https://twitter.com/zeyadetman"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://www.facebook.com/zeyadetman"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/zeyadetman"><i class="fab fa-linkedin-in"></i></a></li>
+        <li><a href="mailto:zeyadetman@gmail.com"><i class="far fa-envelope"></i></a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="mainmenu">
+    <ul class="mainmenu__list">
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+          <a href="/projects">Projects</a>
+      </li>
+      <li>
+          <a href="/blog">Blog</a>
+      </li>
+    </ul>
+    <div class="mainmenu__content">
+      <style>
+.content-body img{
+    max-width: 100%;
+}
+
+.post-title{
+  margin: 0 auto 15px auto;
+  padding: 15px;
+  width: fit-content;
+  text-align: center;
+  border-radius: 5px;
+  color: #3e3e3e;
+  background: rgba(255, 192, 4, 0.88);
+}
+
+.post-info{
+  padding-bottom: 15px;
+  border-bottom: 1px solid #808080;
+  color: #808080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5abac57df3c38cac"></script> 
+
+<h2 class="post-title">Hashtables for newbies</h2>
+<p class="post-info">Sep 26, 2018<span style="margin: 0 10px;">technical</span>
+<a class="twitter-follow-button"
+  href="https://twitter.com/zeyadetman"
+  data-size="small"></a>
+</p>
+
+<div class="content-body">
+<h1 id="hashtables">HashTables</h1>
+
+<p>Before we make a hashtable, let’s talk about its components <code class="highlighter-rouge">arrays</code>, <code class="highlighter-rouge">functions</code>, and <code class="highlighter-rouge">hashing</code>. read them even if you know!</p>
+
+<h2 id="components">Components</h2>
+
+<h3 id="arrays">Arrays?</h3>
+
+<p><code class="highlighter-rouge">const colors = ['red','blue','orange']</code></p>
+
+<p>if we <code class="highlighter-rouge">console.log(colors[0])</code> the console displays the head which is <code class="highlighter-rouge">red</code>, we wrote the elements by this order and know what each index points to which color. This easy and explicit.</p>
+
+<h3 id="functions">Functions?</h3>
+
+<p>Functions are cool boxes, you pass it a value and tell it how to generate a result from it. <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Function_machine2.svg/1200px-Function_machine2.svg.png" alt="" /></p>
+
+<p>Have you ever wrote this in linear algebra class <code class="highlighter-rouge">f(x) = x+5</code>? in programming you can write it in same way <code class="highlighter-rouge">const f = x =&gt; x+5</code>, if we pass it a <code class="highlighter-rouge">3</code> the function returns <code class="highlighter-rouge">8</code> no fancy here.</p>
+
+<h3 id="hashing">Hashing?</h3>
+
+<p>Hashing is kinda blackbox in tech talks, in other words it’s a bunch of steps you’re doing to convert a something to a unique <code class="highlighter-rouge">hash</code> or <code class="highlighter-rouge">value</code>, it’s a oneway you can’t go back. In programming we write those bunch of steps (hash Algorithm) in a function called hash function.</p>
+
+<h3 id="objects">Objects?</h3>
+
+<p>A key-value represented, like arrays but in array you get the value by index, in objects you get the value by its special key.</p>
+
+<p><code class="highlighter-rouge">const white = {code: '#fff', type: 'color'}</code></p>
+
+<p>If we want the <code class="highlighter-rouge">code</code> of <code class="highlighter-rouge">white</code> we simply write <code class="highlighter-rouge">white['code']</code><sup>(1)</sup>, easy and fast huh?</p>
+
+<h2 id="what-is-the-hashtable">What is the hashtable?</h2>
+
+<p>In a simple sentence, Hashtable is data-structure to help you using an ordinary array as a key-value array!</p>
+
+<h3 id="lets-exploring-how">Let’s exploring How?</h3>
+
+<p>We have a <code class="highlighter-rouge">colors</code> array like this:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span>  <span class="nx">colors</span>  <span class="o">=</span> <span class="p">[{</span><span class="na">color</span><span class="p">:</span>  <span class="s1">'white'</span><span class="p">,</span> <span class="na">code</span><span class="p">:</span>  <span class="s1">'#fff'</span><span class="p">},</span>
+<span class="p">{</span><span class="na">color</span><span class="p">:</span>  <span class="s1">'orange'</span><span class="p">,</span> <span class="na">code</span><span class="p">:</span>  <span class="s1">'#fc3'</span><span class="p">}];</span>
+</code></pre></div></div>
+
+<p>and The problem is we have to find the <code class="highlighter-rouge">code</code> of the color <code class="highlighter-rouge">orange</code>?!
+without Hashtable the first naive solution is iterating the whole array and if color is orange display the code! slow, right?</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">colors</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">color</span>  <span class="o">=&gt;</span>
+  <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">color</span><span class="p">[</span><span class="s1">'color'</span><span class="p">]</span> <span class="o">===</span>  <span class="s1">'orange'</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">color</span><span class="p">[</span><span class="s1">'code'</span><span class="p">]);</span>
+  <span class="p">}</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<p>Let’s take another approach, converting it into a key-value array.
+convert the last array to this array:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span>  <span class="nx">colors</span>  <span class="o">=</span> <span class="p">[</span><span class="s1">'#fff'</span><span class="p">,</span><span class="s1">'#fc3'</span><span class="p">];</span>
+</code></pre></div></div>
+<p>and if we write <code class="highlighter-rouge">colors['orange']</code> the console displays <code class="highlighter-rouge">#fc3</code>!
+To do this we have to <code class="highlighter-rouge">hash</code> the word <code class="highlighter-rouge">white</code> and <code class="highlighter-rouge">orange</code> to be equal index in size which is <code class="highlighter-rouge">&gt;=</code> zero and less than the array size.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span>  <span class="nx">colors</span>  <span class="o">=</span> <span class="p">[];</span>
+
+<span class="kd">const</span>  <span class="nx">hashFunction</span>  <span class="o">=</span>  <span class="nx">key</span>  <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span>  <span class="nx">letters</span>  <span class="o">=</span>  <span class="nx">key</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">''</span><span class="p">);</span>
+  <span class="kd">const</span>  <span class="nx">hashValue</span>  <span class="o">=</span>  <span class="nx">letters</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">cur</span><span class="p">)</span> <span class="o">=&gt;</span>
+  <span class="nx">acc</span>  <span class="o">+</span>  <span class="nx">cur</span><span class="p">.</span><span class="nx">charCodeAt</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span>
+  <span class="o">%</span> <span class="p">(</span><span class="o">!</span><span class="nx">colors</span><span class="p">.</span><span class="nx">length</span>  <span class="p">?</span>  <span class="mi">1</span>  <span class="p">:</span>  <span class="nx">colors</span><span class="p">.</span><span class="nx">length</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span> 
+  
+  <span class="c1">// in the line above, we made a '%' to range the</span>
+  <span class="c1">// value to be between zero (included) and the length of</span>
+  <span class="c1">// the list</span>
+  
+  <span class="k">return</span>  <span class="nx">hashValue</span><span class="p">;</span>
+<span class="p">}</span> 
+<span class="nx">colors</span><span class="p">[</span><span class="nx">hashFunction</span><span class="p">(</span><span class="s1">'orange'</span><span class="p">)]</span> <span class="o">=</span>  <span class="s1">'#fc3'</span><span class="p">;</span>
+<span class="nx">colors</span><span class="p">[</span><span class="nx">hashFunction</span><span class="p">(</span><span class="s1">'white'</span><span class="p">)]</span> <span class="o">=</span>  <span class="s1">'#fff'</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">colors</span><span class="p">[</span><span class="nx">hashFunction</span><span class="p">(</span><span class="s1">'orange'</span><span class="p">)]);</span> <span class="c1">// '#fc3'</span>
+</code></pre></div></div>
+
+<p>Wow! that’s Great! but if we have two colors return the same index we call it <code class="highlighter-rouge">Collision</code>, what should we do?!
+In the actual implementations for the hashtable, the hash function must avoid the collision with two constraints:</p>
+<ul>
+  <li>The index must be unique for each word.</li>
+  <li>The index must be <code class="highlighter-rouge">&gt;=</code> zero and <code class="highlighter-rouge">&lt;</code> list length.</li>
+</ul>
+
+<h4 id="notes">Notes:</h4>
+<p>(1) Write it <code class="highlighter-rouge">white['code']</code> don’t <code class="highlighter-rouge">white[code]</code> whatever you wrote <code class="highlighter-rouge">code</code> in the object to avoid conflicts between ordinary variables.</p>
+
+<p>You can read it on <a href="https://gist.github.com/zeyadetman/2843e7d8798a58c3c5149487999c0288">GitHub</a>.</p>
+
+</div>
+<div class="socialmedia">
+    <div id="fb-root"></div>
+    <div class="fb-share-button" data-href="/technical/2018/09/26/hashtables-for-newbies.html" data-layout="button" data-size="large"       data-mobile-iframe="true"><a target="_blank" href="/technical/2018/09/26/hashtables-for-newbies.html"                              class="fb-xfbml-parse-ignore"></a></div>
+
+    <a class="twitter-share-button"
+        href=
+        "https://twitter.com/intent/tweet?text=Hashtables for newbies,%20read%20it%20on:%20"
+        data-size="large"></a>
+</div>
+
+
+
+<div id="disqus_thread"></div>
+
+
+
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMICVALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT:https://disqus.com/admin/universalcode/#configuration-variables*/
+
+(function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://zeyadetman.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1&appId=269290577224281&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/ref_noscript">comments powered by Disqus.</a></noscript>
+
+    </div>
+  </div>
+  
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css">
+<script async>
+  const rotateDeg = (new Date().getHours()%12)*30;
+  const img = document.getElementsByClassName('infosection')[0].children[0].children[0].children[0];
+  console.log(rotateDeg, img)
+  img.style.transform = `rotate(${rotateDeg}deg)`;
+
+window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));
+</script>
+
+</body>
+</html>

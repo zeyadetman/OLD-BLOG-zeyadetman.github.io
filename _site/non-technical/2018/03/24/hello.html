@@ -22,7 +22,15 @@
 
   <div class="infosection">
     <div style="position: fixed; max-width: 280px;">
-      <img src="/images/me.jpg" />
+      <button
+        data-balloon="What's the formula for this rotation🤔?
+          check it out more times, and send your thoughts to me."
+        data-balloon-pos="up"
+        data-balloon-length="large"
+        style="display: contents;"
+      >
+        <img src="/images/me.jpg" />
+      </button>
       <h1>Zeyad Etman</h1>
       <h2>Software Engineer, Front-End Developer</h2>
       <ul>
@@ -48,28 +56,52 @@
       </li>
     </ul>
     <div class="mainmenu__content">
-      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5abac57df3c38cac"></script> 
+      <style>
+.content-body img{
+    max-width: 100%;
+}
 
-<h2 style="margin-bottom: 0;">hello</h2>
-<p style="margin-top: 2px;color: #808080; margin-bottom: 3em; display: flex;">Mar 24, 2018<span style="margin: 0 10px;">non-technical</span>
+.post-title{
+  margin: 0 auto 15px auto;
+  padding: 15px;
+  width: fit-content;
+  text-align: center;
+  border-radius: 5px;
+  color: #3e3e3e;
+  background: rgba(255, 192, 4, 0.88);
+}
+
+.post-info{
+  padding-bottom: 15px;
+  border-bottom: 1px solid #808080;
+  color: #808080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5abac57df3c38cac"></script> 
+
+<h2 class="post-title">hello</h2>
+<p class="post-info">Mar 24, 2018<span style="margin: 0 10px;">non-technical</span>
 <a class="twitter-follow-button"
   href="https://twitter.com/zeyadetman"
   data-size="small"></a>
 </p>
 
+<div class="content-body">
 <p><code class="highlighter-rouge">hello world</code></p>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">show</span>
   <span class="vi">@widget</span> <span class="o">=</span> <span class="no">Widget</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="ss">:id</span><span class="p">])</span>
   <span class="n">respond_to</span> <span class="k">do</span> <span class="o">|</span><span class="nb">format</span><span class="o">|</span>
-    <span class="nb">format</span><span class="p">.</span><span class="nf">html</span> <span class="c1"># show.html.erb
-</span>
+    <span class="nb">format</span><span class="p">.</span><span class="nf">html</span> <span class="c1"># show.html.erb</span>
     <span class="nb">format</span><span class="p">.</span><span class="nf">json</span> <span class="p">{</span> <span class="n">render</span> <span class="ss">json: </span><span class="vi">@widget</span> <span class="p">}</span>
   <span class="k">end</span>
 <span class="k">end</span></code></pre></figure>
 
 
-
+</div>
 <div class="socialmedia">
     <div id="fb-root"></div>
     <div class="fb-share-button" data-href="/non-technical/2018/03/24/hello.html" data-layout="button" data-size="large"       data-mobile-iframe="true"><a target="_blank" href="/non-technical/2018/03/24/hello.html"                              class="fb-xfbml-parse-ignore"></a></div>
@@ -116,7 +148,13 @@
   
 </div>
 
-<script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css">
+<script async>
+  const rotateDeg = (new Date().getHours()%12)*30;
+  const img = document.getElementsByClassName('infosection')[0].children[0].children[0].children[0];
+  console.log(rotateDeg, img)
+  img.style.transform = `rotate(${rotateDeg}deg)`;
+
 window.twttr = (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0],
     t = window.twttr || {};

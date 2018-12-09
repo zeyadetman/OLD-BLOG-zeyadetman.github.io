@@ -64,3 +64,8 @@
     margin-top: 25px;
     margin-bottom: 25px;
 }
+
+.highlight{
+    font-family: monospace;
+    padding: 5px;
+}

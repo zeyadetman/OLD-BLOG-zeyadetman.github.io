@@ -22,7 +22,15 @@
 
   <div class="infosection">
     <div style="position: fixed; max-width: 280px;">
-      <img src="/images/me.jpg" />
+      <button
+        data-balloon="What's the formula for this rotation🤔?
+          check it out more times, and send your thoughts to me."
+        data-balloon-pos="up"
+        data-balloon-length="large"
+        style="display: contents;"
+      >
+        <img src="/images/me.jpg" />
+      </button>
       <h1>Zeyad Etman</h1>
       <h2>Software Engineer, Front-End Developer</h2>
       <ul>
@@ -48,15 +56,40 @@
       </li>
     </ul>
     <div class="mainmenu__content">
-      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5abac57df3c38cac"></script> 
+      <style>
+.content-body img{
+    max-width: 100%;
+}
 
-<h2 style="margin-bottom: 0;">I have finished Head First 2D Geometry book</h2>
-<p style="margin-top: 2px;color: #808080; margin-bottom: 3em; display: flex;">Jun 19, 2016<span style="margin: 0 10px;">books</span>
+.post-title{
+  margin: 0 auto 15px auto;
+  padding: 15px;
+  width: fit-content;
+  text-align: center;
+  border-radius: 5px;
+  color: #3e3e3e;
+  background: rgba(255, 192, 4, 0.88);
+}
+
+.post-info{
+  padding-bottom: 15px;
+  border-bottom: 1px solid #808080;
+  color: #808080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5abac57df3c38cac"></script> 
+
+<h2 class="post-title">I have finished Head First 2D Geometry book</h2>
+<p class="post-info">Jun 19, 2016<span style="margin: 0 10px;">books</span>
 <a class="twitter-follow-button"
   href="https://twitter.com/zeyadetman"
   data-size="small"></a>
 </p>
 
+<div class="content-body">
 <p><a style="float:left;padding-right:20px;" href="https://www.goodreads.com/book/show/6884021-head-first-2d-geometry"><img src="https://d.gr-assets.com/books/1328835032m/6884021.jpg" alt="Head First 2D Geometry" border="0" /></a><a href="https://www.goodreads.com/book/show/6884021-head-first-2d-geometry">Head First 2D Geometry</a> by <a href="https://www.goodreads.com/author/show/5776215.Lindsey_Fallow_Stray">Lindsey Fallow Stray</a></p>
 
 <p>My rating: <a href="https://www.goodreads.com/review/show/1637546333">4 of 5 stars</a></p>
@@ -65,7 +98,7 @@
 
 <p><img class="alignnone size-full wp-image-1337 img-fluid" src="https://zeyadetman.files.wordpress.com/2016/06/dasdasdczxczxc.jpg" alt="dasdasdczxczxc" width="576" height="332" /></p>
 
-
+</div>
 <div class="socialmedia">
     <div id="fb-root"></div>
     <div class="fb-share-button" data-href="/books/2016/06/19/i-have-finished-head-first-2d-geometry-book.html" data-layout="button" data-size="large"       data-mobile-iframe="true"><a target="_blank" href="/books/2016/06/19/i-have-finished-head-first-2d-geometry-book.html"                              class="fb-xfbml-parse-ignore"></a></div>
@@ -112,7 +145,13 @@
   
 </div>
 
-<script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css">
+<script async>
+  const rotateDeg = (new Date().getHours()%12)*30;
+  const img = document.getElementsByClassName('infosection')[0].children[0].children[0].children[0];
+  console.log(rotateDeg, img)
+  img.style.transform = `rotate(${rotateDeg}deg)`;
+
 window.twttr = (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0],
     t = window.twttr || {};

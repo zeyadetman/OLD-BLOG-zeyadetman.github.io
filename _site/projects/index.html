@@ -22,7 +22,15 @@
 
   <div class="infosection">
     <div style="position: fixed; max-width: 280px;">
-      <img src="/images/me.jpg" />
+      <button
+        data-balloon="What's the formula for this rotation🤔?
+          check it out more times, and send your thoughts to me."
+        data-balloon-pos="up"
+        data-balloon-length="large"
+        style="display: contents;"
+      >
+        <img src="/images/me.jpg" />
+      </button>
       <h1>Zeyad Etman</h1>
       <h2>Software Engineer, Front-End Developer</h2>
       <ul>
@@ -115,6 +123,13 @@ const webimgs = `/images/projects/web/`;
 const softwareimgs = `/images/projects/software/`;
 
 var frontendProjects = [
+    {
+        title:'The Chaos Game',
+        description:'A method of creating a fractal, using a polygon and an initial point selected at random inside it.',
+        imgurl:`${webimgs}chaos.png`,
+        sourcecodeurl:'https://github.com/zeyadetman/chaos',
+        site:'https://zeyadetman.github.io/chaos/'
+    },
     {
         title:'Clock',
         description:'simple clock',
@@ -297,7 +312,13 @@ document.addEventListener("DOMContentLoaded", ()=>{
   
 </div>
 
-<script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css">
+<script async>
+  const rotateDeg = (new Date().getHours()%12)*30;
+  const img = document.getElementsByClassName('infosection')[0].children[0].children[0].children[0];
+  console.log(rotateDeg, img)
+  img.style.transform = `rotate(${rotateDeg}deg)`;
+
 window.twttr = (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0],
     t = window.twttr || {};

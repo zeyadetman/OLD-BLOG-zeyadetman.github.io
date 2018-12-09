@@ -22,7 +22,15 @@
 
   <div class="infosection">
     <div style="position: fixed; max-width: 280px;">
-      <img src="/images/me.jpg" />
+      <button
+        data-balloon="What's the formula for this rotation🤔?
+          check it out more times, and send your thoughts to me."
+        data-balloon-pos="up"
+        data-balloon-length="large"
+        style="display: contents;"
+      >
+        <img src="/images/me.jpg" />
+      </button>
       <h1>Zeyad Etman</h1>
       <h2>Software Engineer, Front-End Developer</h2>
       <ul>
@@ -48,15 +56,40 @@
       </li>
     </ul>
     <div class="mainmenu__content">
-      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5abac57df3c38cac"></script> 
+      <style>
+.content-body img{
+    max-width: 100%;
+}
 
-<h2 style="margin-bottom: 0;">Top 12 Repositories on github 'to me' (september 2017)</h2>
-<p style="margin-top: 2px;color: #808080; margin-bottom: 3em; display: flex;">Sep 30, 2017<span style="margin: 0 10px;">technical</span>
+.post-title{
+  margin: 0 auto 15px auto;
+  padding: 15px;
+  width: fit-content;
+  text-align: center;
+  border-radius: 5px;
+  color: #3e3e3e;
+  background: rgba(255, 192, 4, 0.88);
+}
+
+.post-info{
+  padding-bottom: 15px;
+  border-bottom: 1px solid #808080;
+  color: #808080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5abac57df3c38cac"></script> 
+
+<h2 class="post-title">Top 12 Repositories on github 'to me' (september 2017)</h2>
+<p class="post-info">Sep 30, 2017<span style="margin: 0 10px;">technical</span>
 <a class="twitter-follow-button"
   href="https://twitter.com/zeyadetman"
   data-size="small"></a>
 </p>
 
+<div class="content-body">
 <ol>
 	<li>
 <h3><a href="https://github.com/ncase/trust"><span class="text-normal">ncase / </span>trust</a>
@@ -108,7 +141,7 @@ Everything you need to know to get the job.</h3>
 </li>
 </ol>
 
-
+</div>
 <div class="socialmedia">
     <div id="fb-root"></div>
     <div class="fb-share-button" data-href="/technical/2017/09/30/top-12-repositories-on-github-to-me-september-2017.html" data-layout="button" data-size="large"       data-mobile-iframe="true"><a target="_blank" href="/technical/2017/09/30/top-12-repositories-on-github-to-me-september-2017.html"                              class="fb-xfbml-parse-ignore"></a></div>
@@ -155,7 +188,13 @@ Everything you need to know to get the job.</h3>
   
 </div>
 
-<script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css">
+<script async>
+  const rotateDeg = (new Date().getHours()%12)*30;
+  const img = document.getElementsByClassName('infosection')[0].children[0].children[0].children[0];
+  console.log(rotateDeg, img)
+  img.style.transform = `rotate(${rotateDeg}deg)`;
+
 window.twttr = (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0],
     t = window.twttr || {};

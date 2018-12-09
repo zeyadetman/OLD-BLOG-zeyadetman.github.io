@@ -35,7 +35,15 @@
   </div>
   
   <div class="infosection">
-    <img src="/images/me.jpg" />
+    <button
+      data-balloon="What's the formula for this rotation🤔?
+        check it out more times, and send your thoughts to me."
+      data-balloon-pos="up"
+      data-balloon-length="large"
+      style="display: contents;"
+    >
+      <img src="/images/me.jpg" />
+    </button>
     <h1>Zeyad Etman</h1>
     <h2>Software Engineer, Front-End Developer</h2>
     <p class="infosection__details">I'm a front-end developer Currently <a href="https://www.arqamfc.com/" target="_blank">@ArqamFC</a>, writing code everyday, Making beautiful things using different technologies. My languages are Javascript and Python.</p>
@@ -50,12 +58,17 @@
       <ul>
         <li id="featuredProject"><span title="Featured project! Contributions are Welcome!">FEATURED</span><a href="https://github.com/zeyadetman/bankeeper">bankeeper</a></li>
         <li id="latestCoding"><span>Latest Coding</span></li>
-        <li id="latestWriting"><span>Latest Writing</span><a href="/projects/2018/07/25/How-to-pass-state-between-components-in-reactjs.html">How to pass state between components in reactjs (Full Code)</a></li>
+        <li id="latestWriting"><span>Latest Writing</span><a href="/technical/2018/09/26/hashtables-for-newbies.html">Hashtables for newbies</a></li>
       </ul>
     </div>
   </div>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css">
   <script async>
+    const rotateDeg = (new Date().getHours()%12)*30;
+    const img = document.getElementsByClassName('infosection')[0].children[0].children[0];
+    img.style.transform = `rotate(${rotateDeg}deg)`;
+
     const url = 'https://api.github.com/users/zeyadetman/events/public';
     fetch(url).then(response=>response.json())
               .then(response=>{

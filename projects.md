@@ -70,6 +70,13 @@ const softwareimgs = `/images/projects/software/`;
 
 var frontendProjects = [
     {
+        title:'The Chaos Game',
+        description:'A method of creating a fractal, using a polygon and an initial point selected at random inside it.',
+        imgurl:`${webimgs}chaos.png`,
+        sourcecodeurl:'https://github.com/zeyadetman/chaos',
+        site:'https://zeyadetman.github.io/chaos/'
+    },
+    {
         title:'Clock',
         description:'simple clock',
         imgurl:`${webimgs}clock.png`,

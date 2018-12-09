@@ -22,7 +22,15 @@
 
   <div class="infosection">
     <div style="position: fixed; max-width: 280px;">
-      <img src="/images/me.jpg" />
+      <button
+        data-balloon="What's the formula for this rotation🤔?
+          check it out more times, and send your thoughts to me."
+        data-balloon-pos="up"
+        data-balloon-length="large"
+        style="display: contents;"
+      >
+        <img src="/images/me.jpg" />
+      </button>
       <h1>Zeyad Etman</h1>
       <h2>Software Engineer, Front-End Developer</h2>
       <ul>
@@ -48,15 +56,40 @@
       </li>
     </ul>
     <div class="mainmenu__content">
-      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5abac57df3c38cac"></script> 
+      <style>
+.content-body img{
+    max-width: 100%;
+}
 
-<h2 style="margin-bottom: 0;">Developers should have two minds, technical mind and business mind.</h2>
-<p style="margin-top: 2px;color: #808080; margin-bottom: 3em; display: flex;">Dec 03, 2017<span style="margin: 0 10px;">technical</span>
+.post-title{
+  margin: 0 auto 15px auto;
+  padding: 15px;
+  width: fit-content;
+  text-align: center;
+  border-radius: 5px;
+  color: #3e3e3e;
+  background: rgba(255, 192, 4, 0.88);
+}
+
+.post-info{
+  padding-bottom: 15px;
+  border-bottom: 1px solid #808080;
+  color: #808080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5abac57df3c38cac"></script> 
+
+<h2 class="post-title">Developers should have two minds, technical mind and business mind.</h2>
+<p class="post-info">Dec 03, 2017<span style="margin: 0 10px;">technical</span>
 <a class="twitter-follow-button"
   href="https://twitter.com/zeyadetman"
   data-size="small"></a>
 </p>
 
+<div class="content-body">
 <p>The problem i want to talk about in this post that we consider our minds should have one direction or thought, and this direction must be technical, we don’t have to think of how to ‘sell’ our technical minds? or their products?  - this is the Goal.</p>
 
 <p>One time, i followed @curiositydotcom account on instagram, i liked them but i didn’t have time to see all the ‘old’ pics, so i created a tool in python to download all pics from pic0 to the latest to see them in my free time without internet access, even though i was know little about python the code worked and i did it. In a few months later i found a job ‘scraping pics from public instagram account’ for 30$, i never for a moment imagined that this little and tiny tool costs 30$ or 540L.E, because i have just one mind only the technical mind.</p>
@@ -73,7 +106,7 @@
 
 <p>you can share your thoughts with me, feel free to <a href="https://ask.fm/zeyadetman" target="_blank" rel="noopener">ask</a>.</p>
 
-
+</div>
 <div class="socialmedia">
     <div id="fb-root"></div>
     <div class="fb-share-button" data-href="/technical/2017/12/03/Developers-should-have-two-minds.html" data-layout="button" data-size="large"       data-mobile-iframe="true"><a target="_blank" href="/technical/2017/12/03/Developers-should-have-two-minds.html"                              class="fb-xfbml-parse-ignore"></a></div>
@@ -120,7 +153,13 @@
   
 </div>
 
-<script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css">
+<script async>
+  const rotateDeg = (new Date().getHours()%12)*30;
+  const img = document.getElementsByClassName('infosection')[0].children[0].children[0].children[0];
+  console.log(rotateDeg, img)
+  img.style.transform = `rotate(${rotateDeg}deg)`;
+
 window.twttr = (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0],
     t = window.twttr || {};
