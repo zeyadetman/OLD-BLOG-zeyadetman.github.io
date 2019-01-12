@@ -1,24 +1,30 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en">
+
+<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Zeyad Etman</title>
-<meta name="generator" content="Jekyll v3.7.3" />
-<meta property="og:title" content="Home" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-<link rel="canonical" href="/" />
-<meta property="og:url" content="/" />
-<meta property="og:site_name" content="Zeyad Etman" />
-<script type="application/ld+json">
+  <title>Zeyad Etman</title>
+  <meta name="generator" content="Jekyll v3.7.3" />
+  <meta property="og:title" content="Home" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+  <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+  <link rel="canonical" href="/" />
+  <meta property="og:url" content="/" />
+  <meta property="og:site_name" content="Zeyad Etman" />
+  <script type="application/ld+json">
 {"name":"Zeyad Etman","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"WebSite","url":"http://localhost:4000/","headline":"About","@context":"http://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-<link rel="stylesheet" href="/css/all.css">
-<link rel="stylesheet" href="/css/home.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Zeyad Etman" /></head>
+  <!-- End Jekyll SEO tag -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="/css/all.css">
+  <link rel="stylesheet" href="/css/home.css">
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Zeyad Etman" />
+</head>
+
 <body>
   <div class="mainmenu">
     <ul class="mainmenu__list">
@@ -26,27 +32,21 @@
         <a href="/">Home</a>
       </li>
       <li>
-          <a href="/projects">Projects</a>
+        <a href="/projects">Projects</a>
       </li>
       <li>
-          <a href="/blog">Blog</a>
+        <a href="/blog">Blog</a>
       </li>
     </ul>
   </div>
-  
+
   <div class="infosection">
-    <button
-      data-balloon="What's the formula for this rotation🤔?
-        check it out more times, and send your thoughts to me."
-      data-balloon-pos="up"
-      data-balloon-length="large"
-      style="display: contents;"
-    >
-      <img src="/images/me.jpg" />
-    </button>
+    <img src="/images/me.jpg" />
     <h1>Zeyad Etman</h1>
     <h2>Software Engineer, Front-End Developer</h2>
-    <p class="infosection__details">I'm a front-end developer Currently <a href="https://www.arqamfc.com/" target="_blank">@ArqamFC</a>, writing code everyday, Making beautiful things using different technologies. My languages are Javascript and Python.</p>
+    <p class="infosection__details">I'm a front-end developer Currently <a href="https://www.lynks.com/" target="_blank">@Lynks</a>,
+      writing code everyday, Making Useful things using different technologies.</p>
+    Prev: <a href="https://www.arqamfc.com/" target="_blank">@ArqamFC</a>
     <ul>
       <li><a href="https://github.com/zeyadetman"><i class="fab fa-github"></i></a></li>
       <li><a href="https://twitter.com/zeyadetman"><i class="fab fa-twitter"></i></a></li>
@@ -61,27 +61,28 @@
         <li id="latestWriting"><span>Latest Writing</span><a href="/technical/2018/09/26/hashtables-for-newbies.html">Hashtables for newbies</a></li>
       </ul>
     </div>
+
+    <p style="
+      font-size: 12px;
+      color: #afafaf;">Last Updated on: Sat Jan 12 2019</p>
   </div>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css">
   <script async>
-    const rotateDeg = (new Date().getHours()%12)*30;
-    const img = document.getElementsByClassName('infosection')[0].children[0].children[0];
-    img.style.transform = `rotate(${rotateDeg}deg)`;
-
     const url = 'https://api.github.com/users/zeyadetman/events/public';
-    fetch(url).then(response=>response.json())
-              .then(response=>{
-                response.find(event=>{
-                  if(event.type === 'PushEvent'){
-                    document.getElementById('latestCoding').innerHTML += `
+    fetch(url).then(response => response.json())
+      .then(response => {
+        response.find(event => {
+          if (event.type === 'PushEvent') {
+            document.getElementById('latestCoding').innerHTML += `
                     <a href="https://github.com/${event.repo.name}">${event.repo.name}</a>
                     `;
-                    return event; 
-                  }
-                });
-              })
+            return event;
+          }
+        });
+      })
   </script>
 
 </body>
+
 </html>

@@ -55,7 +55,7 @@
 
 .cards{
     display: grid;
-    grid-template-columns: minmax(auto, 25em);
+    grid-template-columns: auto auto;
     grid-column-gap: 20px;
     grid-row-gap: 15px;
 }

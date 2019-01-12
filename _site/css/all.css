@@ -23,13 +23,13 @@ body{
 }
 
 .mainmenu__list a,
-.infosection__details a{
+.infosection a{
     text-decoration: none;
     color: #808080;
 }
 
 .mainmenu__list a:hover,
-.infosection__details a:hover{
+.infosection a:hover{
     color: #0d0d0d;
 }
 

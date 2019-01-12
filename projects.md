@@ -70,6 +70,20 @@ const softwareimgs = `/images/projects/software/`;
 
 var frontendProjects = [
     {
+        title:'Moviesta',
+        description:'🎞️ The king of Movies',
+        imgurl:`${webimgs}moviesta.png`,
+        sourcecodeurl:'https://github.com/zeyadetman/Moviesta',
+        site:'https://zeyadetman.github.io/Moviesta/'
+    },
+    {
+        title:'Which movie should watch?',
+        description:'🎥 Compare between two movies to choose your next movie',
+        imgurl:`${webimgs}wmsw.png`,
+        sourcecodeurl:'https://github.com/zeyadetman/which-movie-should-watch',
+        site:'https://zeyadetman.github.io/which-movie-should-watch/'
+    },
+    {
         title:'The Chaos Game',
         description:'A method of creating a fractal, using a polygon and an initial point selected at random inside it.',
         imgurl:`${webimgs}chaos.png`,
