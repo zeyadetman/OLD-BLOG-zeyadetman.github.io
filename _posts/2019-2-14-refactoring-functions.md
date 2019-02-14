@@ -1,5 +1,5 @@
 ---
-title: Refactoring Functions
+title: Refactoring Functions in JavaScript
 layout: post
 date: '2019-02-14 20:12:50'
 categories: technical
